@@ -6,7 +6,7 @@ class Knight
 
   def initialize(options)
     @id=options['id'].to_i
-    @name= options['name']
+    @name= options['name'].split.map{|i| i.capitalize}.join(' ')
     @nation_id= options['nation_id'].to_i
     @horse= options['horse']
     @img = options['img']
@@ -34,7 +34,7 @@ class Knight
     @horse = nil
   end
 
-  
+
 # DATABASE FUNCTIONS
   def save()
     sql = "INSERT INTO knights (name, nation_id, img, wealth) VALUES ('#{@name}', #{@nation_id} ,'#{@img}' ,#{@wealth} ) RETURNING *"

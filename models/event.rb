@@ -16,4 +16,14 @@ class Event
     @competitors=[]
   end
 
-end
+  def competitor_count()
+    return @competitors.size
+  end
+
+  def add_knight(knight)
+    if competitor_count < @max
+      @competitors << knight 
+    else
+      return "Event Full"
+    end
+  end
