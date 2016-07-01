@@ -2,7 +2,8 @@ require_relative('../db/sql_runner')
 
 class Trophy
 
-  def initialize
+  attr_reader(:type,:event,:event_id,:family,:event_img,:prize)
+  def initialize(options)
     @type=options['type']
     @event=options['event']
     @event_id=options['event_id'].to_i
