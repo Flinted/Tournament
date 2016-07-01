@@ -11,5 +11,5 @@ class Trophy
     @event_img=options['img']
     @prize=options['prize'].to_i
   end
-
+  
 end

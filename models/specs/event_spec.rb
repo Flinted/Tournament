@@ -43,7 +43,7 @@ class TestEvent < MiniTest::Test
       @event1.add_knight(@knight1)
       @event1.add_knight(@knight2)
       assert_equal(1,@event1.competitor_count)
-
-
+      assert_equal("Event Full", @event1.add_knight(@knight2))
     end
+
 end
