@@ -4,6 +4,11 @@
  <div class="order">
  <b><a href="/horses/<%=horse.id%>"><%= horse.name()%></a></b>
  <div class = "thumbnail_sizer"><a href="/horses/<%= horse.id%>"><img class = "thumbnail" src="<%=horse.img%>"></a></div>
+ <%if horse.knight_id != 0  %>
+ <p>ridden by <%=Knight.find(horse.knight_id).name %></p>
+ <% else %>
+ <p>Is in the stable.</p>
+<%end %>
  <hr>
  </div>
 <%end%>

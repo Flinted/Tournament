@@ -48,4 +48,8 @@ class Horse
       result = Horse.map_items(sql)
       return result.first
     end
+
+    def add_knight_id(id)
+      @knight_id=id
+    end
 end

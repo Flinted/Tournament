@@ -3,33 +3,44 @@
 <form action="/events" method="post">
  <label for="name">Event name:</label>
  <input type="text" name="name" placeholder="Enter name.">
-
+<hr>
  <label for="family"> Event family:</label>
  <select name="family">
-     <option value="combat">Combat</option>
-     <option value="sporting">Sporting</option>
+     <option value="mounted">Mounted</option>
+     <option value="on foot">On foot</option>
+     <option value="ranged">Ranged</option>
+     <option value="solo">Sport</option>
  </select>
+ <hr>
 
 <label for="type">Event type:</label>
 <select name="type">
-  <option value="mounted">Mounted</option>
-  <option value="on foot">On foot</option>
-  <option value="ranged">Ranged</option>
-  <option value="solo">Solo</option>
-  <option value="team">Team</option>
+<option value="jousting">Jousting</option>
+<option value="sword and shield">Sword & Shield</option>
+<option value="wrestling">Wrestling</option>
+<option value="team combat">Team Combat</option>  
+<option value="archery">Archery</option>
+  <option value="crossbows">Crossbows</option>
+  <option value="threading the needle">Threading the Needle</option>
+  <option value="colf">Colf</option>
+  <option value="horseshoes">Horseshoes</option>
+  <option value="quarter staff">Quarter-Staff</option>
+  <option value="hammer throwing">Hammer Throwing</option>
+  <option value="bowls">Bowls</option>
 </select>
+<hr>
 
 <label for="img">Event image:</label>
 <input type="text" name="img" placeholder="Enter url">
-
+<hr>
 <label for="max">Maximum Competitors:</label>
 <input type="number" name="" placeholder="Enter max">
-
+<hr>
 <label for="prize">Prize Money:</label>
 <input type="number" name="name" placeholder="Enter prize">
-
+<hr>
 <label for="date">Event Date:</label>
 <input type="date" name="date">
-
+<hr>
 <input type='submit' value="Add Event">
 </form>

@@ -23,4 +23,9 @@ class List
       run(sql)
     end
   end
+
+  def self.delete_all
+    sql = "DELETE FROM lists"
+    run(sql)
+  end
 end
