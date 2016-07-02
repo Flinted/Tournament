@@ -1,0 +1,12 @@
+<p><%=@horse.name%></p>
+<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=@horse.img%>"></div>
+
+
+<hr>
+
+<a href="/horses/<%=@horse.id%>/edit">Edit Horse</a>
+
+<form action="/horses/<%=@horse.id%>/delete" method="post">
+<hr>
+<input type="submit" value="Delete Horse">
+</form>

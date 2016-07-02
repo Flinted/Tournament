@@ -1,0 +1,14 @@
+<p><%=@kingdom.name%></p>
+<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=@kingdom.flag%>"></div>
+
+<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=@kingdom.arms%>"></div> 
+
+
+<hr>
+
+<a href="/kingdoms/<%=@kingdom.id%>/edit">Edit Kingdom</a>
+
+<form action="/kingdoms/<%=@kingdom.id%>/delete" method="post">
+<hr>
+<input type="submit" value="Delete Kingdom">
+</form>

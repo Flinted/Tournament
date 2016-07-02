@@ -13,8 +13,13 @@ class Kingdom
 
   # DATABASE FUNCTIONS
     def save()
-      sql = "INSERT INTO kingdoms (name, flag, arms) VALUES ('#{@name}', '#{@flag}' ,#{@arms} ) RETURNING *"
+      sql = "INSERT INTO kingdoms (name, flag, arms) VALUES ('#{@name}', '#{@flag}' ,'#{@arms}' ) RETURNING *"
       return Kingdom.map_item(sql)
+    end
+
+    def self.destroy(id)
+      sql = "DELETE FROM kingdoms WHERE id = #{id}"
+      run(sql)
     end
 
     def self.all()

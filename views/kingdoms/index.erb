@@ -1,0 +1,9 @@
+<h2>Kingdoms</h2>
+
+<% @kingdoms.each do |kingdom| %>
+ <div class="order">
+ <p><a href="/kingdoms/<%=kingdom.id%>"><%= kingdom.name()%></a></p>
+ <div class = "thumbnail_sizer"><a href="/kingdoms/<%= kingdom.id%>"><img class = "thumbnail" src="<%=kingdom.flag%>"></a></div>
+ <hr>
+ </div>
+<%end%>

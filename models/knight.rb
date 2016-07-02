@@ -34,11 +34,15 @@ class Knight
     @horse = nil
   end
 
-
 # DATABASE FUNCTIONS
   def save()
     sql = "INSERT INTO knights (name, nation_id, img, wealth) VALUES ('#{@name}', #{@nation_id} ,'#{@img}' ,#{@wealth} ) RETURNING *"
     return Knight.map_item(sql)
+  end
+
+  def self.destroy(id)
+    sql = "DELETE FROM knights WHERE id = #{id}"
+    run(sql)
   end
 
   def self.all()

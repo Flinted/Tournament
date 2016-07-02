@@ -30,8 +30,8 @@ class Event
 
   # DATABASE FUNCTIONS
     def save()
-      sql = "INSERT INTO events (name, type, family, max, img, prize, event_date) VALUES ('#{@name}', #{@type} ,'#{@family}' ,#{@max},'#{@img}',#{@prize},'#{@even_date}' ) RETURNING *"
-      return event.map_item(sql)
+      sql = "INSERT INTO events (name, type, family, max, img, prize, event_date) VALUES ('#{@name}', '#{@type}' ,'#{@family}' ,#{@max},'#{@img}',#{@prize},'#{@event_date}' ) RETURNING *"
+      return Event.map_item(sql)
     end
 
     def self.all()

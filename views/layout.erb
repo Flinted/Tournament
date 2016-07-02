@@ -2,8 +2,63 @@
 <html>
 <head>
   <title>Tournament</title>
-</head>
-<body>
-<%=yield%>
-</body>
-</html>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Metamorphous' rel='stylesheet' type='text/css'>
+  <body>
+    <div class="navbar">
+   <!--    <ul class = "menu">
+        <li><a href="/rankings">Rankings</a></li>
+        <li><a href="/kingdoms">Kingdoms</a></li>
+        <li><a href="/knights">Knights</a></li>
+        <li><a href="/horses">Horses</a></li>
+        <li><a href="/events">Events</a></li>
+      </ul> -->
+
+      <div class="dropdown">
+        <button class="dropbtn"><a href="/rankings">Rankings</a></button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><a href="/kingdoms">Kingdoms</a></button>
+        <div class="dropdown-content">
+          <a href="/kingdoms/new">New Kingdom</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><a href="/knights">Knights</a></button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><a href="/events">Events</a></button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><a href="/horses">Horses</a></button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+
+
+      <div class = "content">
+        <%=yield%>
+      </div>
+    </body>
+    </html>

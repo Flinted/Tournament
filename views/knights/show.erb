@@ -1,0 +1,15 @@
+<p><%=@knight.name%></p>
+<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=@knight.img%>"></div>
+<h1>Fighting for:</h1>
+<h1><%=Kingdom.find(@knight.nation_id).name%></h1>
+
+<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=Kingdom.find(@knight.nation_id).flag%>"></div> 
+
+<hr>
+
+<a href="/knights/<%=@knight.id%>/edit">Edit Knight</a>
+
+<form action="/knights/<%=@knight.id%>/delete" method="post">
+<hr>
+<input type="submit" value="Delete Knight">
+</form>

@@ -1,0 +1,12 @@
+<h2>Events</h2>
+
+<% @events.each do |event| %>
+ <div class="order">
+ <b><a href="/events/<%=event.id%>"><%= event.name()%></a></b>
+ <p>Event type: <%= event.type()%></p>
+ <p>Event group: <%= event.family()%></p>
+ <p>Max Competitors: <%= event.max()%></p>
+ <div class = "thumbnail_sizer"><a href="/events/<%= event.id%>"><img class = "thumbnail" src="<%=event.img%>"></a></div>
+ <hr>
+ </div>
+<%end%>

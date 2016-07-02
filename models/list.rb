@@ -14,4 +14,13 @@ class List
   def remove(knight)
       @knights.delete(knight)
   end
+
+  # DATABASE FUNCTIONS
+
+  def save
+    @knights.each do |knight|
+      sql = "INSERT INTO lists (knight_id) VALUES (#{knight.id})"
+      run(sql)
+    end
+  end
 end
