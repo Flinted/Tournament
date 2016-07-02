@@ -1,12 +1,9 @@
-<h2>Events</h2>
+<h2>Horses</h2>
 
-<% @events.each do |event| %>
+<% @horses.each do |horse| %>
  <div class="order">
- <b><a href="/events/<%=event.id%>"><%= event.name()%></a></b>
- <p>Event type: <%= event.type()%></p>
- <p>Event group: <%= event.family()%></p>
- <p>Max Competitors: <%= event.max()%></p>
- <div class = "thumbnail_sizer"><a href="/events/<%= event.id%>"><img class = "thumbnail" src="<%=event.img%>"></a></div>
+ <b><a href="/horses/<%=horse.id%>"><%= horse.name()%></a></b>
+ <div class = "thumbnail_sizer"><a href="/horses/<%= horse.id%>"><img class = "thumbnail" src="<%=horse.img%>"></a></div>
  <hr>
  </div>
 <%end%>

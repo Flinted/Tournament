@@ -18,6 +18,13 @@ get '/events/new' do
   erb(:'events/new')
 end
 
+get 'events/stage' do
+  @knights =Knight.all
+  @kingdoms=Kingdom.all
+  @events = Event.all
+  erb('events/stage')
+end
+
 # create
 post '/events' do
   @event = Event.new(params)

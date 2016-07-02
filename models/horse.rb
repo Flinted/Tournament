@@ -33,6 +33,11 @@ class Horse
       return Horse.map_item(sql)
     end
 
+    def self.destroy(id)
+      sql = "DELETE FROM horses WHERE id = #{id}"
+      run(sql)
+    end
+
     def self.map_items(sql)
       horses = run(sql)
       result = horses.map { |horse| Horse.new( horse) }

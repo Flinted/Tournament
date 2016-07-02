@@ -1,11 +1,9 @@
-
-
 body {
   height:100%;
   font-family: 'Metamorphous', cursive;
   text-align: center;
-  background-color: black;
-  background-image: url('wood.png');
+  background-color: #263959;
+  background-image: url('clean-textile.png');
 }
 
 .navbar {
@@ -13,11 +11,15 @@ body {
   height: 60px;
 }
 
+/*general container for pages*/
 .content {
-  background-color: grey;
-  height:auto;
+  background-color: #55967e;
+  /*background-image: url('wood.png');*/
+  min-height:1200px;
+  width:90%;
+  margin: auto;
 }
-
+/*image sizer*/
 .thumbnail_sizer{
   width: 200px;
   height: 200px;
@@ -33,7 +35,7 @@ body {
 /*MENU STUFF*/
 /* Dropdown Button */
 .dropbtn {
-    background-color: orange;
+    background-color: #6d819c;
     width:150px;
     color: white;
     padding: 16px;
@@ -82,5 +84,5 @@ body {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: black;
+    background-color: #e4e7ec;
 }

@@ -3,8 +3,6 @@ require_relative('../db/sql_runner')
 require_relative('../models/knight')
 require_relative('../models/horse')
 
-@minimenu = '<a href="/kingdoms/new">New</a><a href="/kingdoms">List</a>'
-
 # index
 get '/kingdoms' do
   @kingdoms = Kingdom.all()

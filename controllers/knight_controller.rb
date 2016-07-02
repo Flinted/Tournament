@@ -25,12 +25,19 @@ post '/knights' do
   erb(:'knights/create')
 end
 
+get '/knights/stables' do
+  @knights = Knight.all()
+  @horses = Horse.all()
+  erb(:'knights/stables')
+end
+
 # show
 get '/knights/:id' do
   @knight = Knight.find(params[:id])
   # @kingdoms = Kingdom.all
   erb(:'knights/show')
 end
+
 
 post '/knights/:id/delete' do
   Knight.destroy(params[:id])

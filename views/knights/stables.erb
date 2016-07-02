@@ -1,0 +1,22 @@
+ <form action="/knights/stables" method="post">
+
+   <label for="knight">Select a Knight?</label>
+   <select name="knight">
+    <% @knights.each do |knight|%>
+        <%if knight.horse == nil%>
+        <option value="<%= knight.id %>"><%= knight.name %></option>
+        <%end%>
+    <% end %>
+    </select>
+<hr>
+    <label for="horse">Pick a steed?</label>
+    <select name="horse">
+     <% @horses.each do |horse|%>
+        <%if horse.knight_id == 0%>
+        <option value="<%= horse.id %>"><%= horse.name %></option>
+        <% end %>
+     <% end %>
+     </select>
+     <hr>
+     <input type='submit' value="Add Horse">
+     </form>
