@@ -23,6 +23,7 @@ class Knight
   end
 
   def add_trophy(trophy)
+    @wealth += trophy.prize
     @trophies << trophy
   end
 

@@ -21,10 +21,10 @@ Kingdom.delete_all
 @horse3= Horse.new({'name'=>'Horse I win', 'img' => 'https://www.google.co.uk/'}).save
 @horse4= Horse.new({'name'=>'Racheal', 'img' => 'https://www.google.co.uk/'}).save
 
-@knight1= Knight.new({'name' => 'Sir Reginald', 'nation_id' => @kingdom1.id,'horse' => @horse1,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
-@knight2= Knight.new({'name' => 'Sir Percival', 'nation_id' => @kingdom2.id,'horse' => @horse2,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
-@knight3= Knight.new({'name' => 'Sir Robin', 'nation_id' => @kingdom3.id,'horse' => @horse3,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
-@knight4= Knight.new({'name' => 'Sir Galahad', 'nation_id' => @kingdom1.id,'horse' => @horse4,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
+@knight1= Knight.new({'name' => 'Sir Reginald', 'nation_id' => @kingdom1.id,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
+@knight2= Knight.new({'name' => 'Sir Percival', 'nation_id' => @kingdom2.id,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
+@knight3= Knight.new({'name' => 'Sir Robin', 'nation_id' => @kingdom3.id,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
+@knight4= Knight.new({'name' => 'Sir Galahad', 'nation_id' => @kingdom1.id,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
 @knight5= Knight.new({'name' => 'Sir Artod', 'nation_id' => @kingdom1.id,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
 @knight6= Knight.new({'name' => 'Sir Baran', 'nation_id' => @kingdom2.id,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save
 @knight7= Knight.new({'name' => 'Sir Tim', 'nation_id' => @kingdom2.id,'img' => 'https://www.google.co.uk/', 'wealth' => 500}).save

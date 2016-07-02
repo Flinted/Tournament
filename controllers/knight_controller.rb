@@ -32,12 +32,11 @@ get '/knights/stables' do
 end
 
 post '/knights/stables' do
-  binding.pry
-    horse=Horse.find(params[:horse].to_i)
-    knight=Knight.find(params[:knight].to_i)
-    binding.pry
-    horse.add_knight_id(knight.id)
-    knight.add_horse[horse]
+    @horse = Horse.find(params[:horse].to_i)
+    @knight=Knight.find(params[:knight].to_i)
+    @horse.add_knight_id(@knight.id)
+    @horse.save
+    @knight.add_horse(@horse)
     erb(:'knights/show')
 end
 

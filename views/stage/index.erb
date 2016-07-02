@@ -1,0 +1,16 @@
+<form action="/stage" method="post">
+ <label for="type">Event:</label>
+ <select name="type">
+ <% @events.each do |event|%>
+    <option value="<%= event.id %>"><%= event.name %></option>
+ <% end %>
+<input type='submit' value="Stage Event">
+</form>
+
+<hr>
+<% @events.each do |event| %>
+ <div class="order">
+ <b><a href="/events/<%=event.id%>"><%= event.name()%></a></b>
+ <div class = "thumbnail_sizer"><a href="/events/<%= event.id%>"><img class = "thumbnail" src="<%=event.img%>"></a></div>
+ </div>
+<%end%>

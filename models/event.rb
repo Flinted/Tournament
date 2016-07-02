@@ -31,17 +31,17 @@ class Event
 
   # DATABASE FUNCTIONS
   def run_event()
-    binding.pry
     if competitor_count!=0
       @competitors.shuffle!
       position = 1
       @competitors.each do |competitor|
-        sql = "INSERT INTO results (event_id, knight_id, position) VALUES (#{@event_id}, #{competitor.id},#{position})"
+        sql = "INSERT INTO results (event_id, knight_id, position) VALUES (#{@id}, #{competitor.id},#{position})"
         run(sql)
         medal = "tin"
         medal = "Gold" if position == 1
         medal = "Silver" if position == 2
         medal = "Bronze" if position == 3
+        binding.pry
         trophy=Trophy.new(self,position,medal)
         position += 1
         competitor.add_trophy(trophy)

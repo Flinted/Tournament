@@ -1,14 +1,10 @@
-<p><%=@kingdom.name%></p>
-<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=@kingdom.flag%>"></div>
-
-<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=@kingdom.arms%>"></div> 
-
+<p><%=@event.name%></p>
+<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=@event.img%>"></div>
 
 <hr>
 
-<a href="/kingdoms/<%=@kingdom.id%>/edit">Edit Kingdom</a>
-
-<form action="/kingdoms/<%=@kingdom.id%>/delete" method="post">
+<a href="/events/<%=@event.id%>/edit">Edit Event</a>
 <hr>
-<input type="submit" value="Delete Kingdom">
+<form action="/events/<%=@event.id%>/delete" method="post">
+<input type="submit" value="DeleteEvent">
 </form>
