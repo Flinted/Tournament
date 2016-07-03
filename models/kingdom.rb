@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require('pry-byebug')
 
 class Kingdom
 
@@ -12,6 +13,12 @@ class Kingdom
   end
 
   # DATABASE FUNCTIONS
+    def get_knights()
+      sql = "SELECT knights.id FROM knights WHERE knights.nation_id = #{@id}"
+      result = run(sql)
+      return result
+    end
+
     def save()
       sql = "INSERT INTO kingdoms (name, flag, arms) VALUES ('#{@name}', '#{@flag}' ,'#{@arms}' ) RETURNING *"
       return Kingdom.map_item(sql)

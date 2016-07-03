@@ -35,6 +35,16 @@ class Knight
     @horse = nil
   end
 
+  def get_points()
+      @trophies.each do |trophy|
+        gold += 1 if trophy.type == 'gold'
+        silver += 1 if trophy.type == 'silver'
+        bronze += 1 if trophy.type == 'bronze'
+      end
+      points = (gold * 5) + (silver*3) + bronze
+      return points
+  end
+
 # DATABASE FUNCTIONS
   def save()
     sql = "INSERT INTO knights (name, nation_id, img, wealth) VALUES ('#{@name}', #{@nation_id} ,'#{@img}' ,#{@wealth} ) RETURNING *"

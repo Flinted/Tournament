@@ -1,22 +1,27 @@
 require ('minitest/autorun')
 require ('minitest/rg')
 require_relative('../trophy')
+require_relative('../event')
 
 class TestTrophy < MiniTest::Test
 
     def setup
-      @trophy1= Trophy.new({
-        'type'=> "gold",
-        'event' => "jousting",
-        'event_id' => 2,
-        'family' => "mounted",
-        'event_img' => 'www.google.co.uk',
-        'prize' => 500
-        })
+        @event1=Event.new({
+          'name' => 'fast joust',
+          'type' => 'jousting',
+          'family'=>'mounted',
+          'max' => 1,
+          'img' => 'www.google.co.uk',
+          'prize' => 500,
+          'event_date' => '2016-03-30'
+          })
+
+      @trophy1= Trophy.new(@event1,1)
     end
 
     def test_setup
-      assert_equal(2,@trophy1.event_id)
+      assert_equal(500,@trophy1.prize)
+      assert_equal('gold',@trophy1.type)
     end
 
 

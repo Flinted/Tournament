@@ -1,6 +1,6 @@
 <h1><%=@event.name %></h1>
 <h2><%=@event.max  %> competitors can compete</h2>
-
+<form>
 <label for="knight">Knights:</label>
 <select name="knight">
     <% @list.knights.each do |knight|%>

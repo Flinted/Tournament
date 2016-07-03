@@ -3,8 +3,11 @@ require_relative('../db/sql_runner')
 class Trophy
 
   attr_reader(:type,:event,:event_id,:family,:event_img,:prize)
-  def initialize(event, position, type)
-    @type=type
+  def initialize(event, position)
+    @type= 'tin'
+    @type= 'gold' if position == 1
+    @type= 'silver' if position == 2
+    @type= 'bronze' if position == 3 
     @position = position
     @event=event.name
     @event_id=event.id.to_i

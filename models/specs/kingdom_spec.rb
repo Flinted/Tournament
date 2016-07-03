@@ -16,4 +16,5 @@ class TestKingdom < MiniTest::Test
         assert_equal('Kingdom Of Scotland', @kingdom1.name)
     end
 
+    
 end

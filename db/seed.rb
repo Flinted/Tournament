@@ -4,6 +4,7 @@ require_relative('../models/horse')
 require_relative('../models/list')
 require_relative('../models/kingdom')
 require_relative('../models/event')
+require_relative('../models/ranking')
 require ('pry-byebug')
 
 List.delete_all
@@ -42,3 +43,9 @@ Kingdom.delete_all
 @event1.add_knight(@knight3)
 @event1.add_knight(@knight4)
 @event1.run_event
+
+@ranking= Ranking.new({'knights' => Knight.all, 'events' => Event.all, 'kingdoms' => Kingdom.all})
+@ranking.refresh()
+
+binding.pry
+nil
