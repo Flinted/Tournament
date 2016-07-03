@@ -4,7 +4,9 @@
 <label for="knight">Knights:</label>
 <select name="knight">
     <%@list.knights.each do |knight|%>
-        <option value="<%= knight.id %>"><%= knight.name %></option>
+        <%if not @event.competitor_ids.include?(knight.id) %> 
+        <option value="<%= knight.id %>"><%= knight.name %></option> 
+        <% end %>
     <% end %>
  <input type='submit' value="Add Knight">
 </form>

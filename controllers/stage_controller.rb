@@ -11,6 +11,7 @@ get '/stage' do
   erb(:'stage/index')
 end
 
+#shows drop down for adding knights 
 post '/stage' do
   ref = params['type'].to_i
   @event = Event.find(ref)
@@ -19,13 +20,13 @@ post '/stage' do
   erb(:'stage/new')
 end
 
+# loops drop down
 post '/stage/:id/new' do
   @event = Event.find(params['id'])
   knight = Knight.find(params['knight'])
   @list = List.new(Knight.all)
   @event.tracker(knight.id)
   @event.populate()
-  # binding.pry
   erb(:'stage/new')
 end
 

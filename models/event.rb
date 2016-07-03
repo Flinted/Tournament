@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 require ('pry-byebug')
 class Event
 
-  attr_reader(:name,:id,:type,:family,:img,:max,:prize,:track,:competitors,:event_date)
+  attr_reader( :name, :id, :type, :family, :img, :max, :prize, :track, :competitors, :event_date)
 
   def initialize(options)
     @id= options['id'].to_i
@@ -42,6 +42,11 @@ class Event
           add_knight(Knight.find(id.to_i)) unless id.length == 0
         end
     end
+  end
+
+  def competitor_ids
+    ids = @competitors.map {|knight| knight.id}
+    return ids
   end
 
   # DATABASE FUNCTIONS
@@ -91,5 +96,12 @@ class Event
     result = Event.map_items(sql)
     return result.first
   end
+
+  def self.destroy(id)
+    sql = "DELETE FROM events WHERE id = #{id}"
+    run(sql)
+  end
+
+
 
 end
