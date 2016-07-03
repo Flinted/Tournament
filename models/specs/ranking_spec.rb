@@ -73,6 +73,4 @@ class TestRanking< MiniTest::Test
     assert_equal(8,@knight1.get_knights_points)
   end
 
-
-
 end

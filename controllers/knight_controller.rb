@@ -35,7 +35,6 @@ post '/knights/stables' do
     @horse = Horse.find(params[:horse].to_i)
     @knight=Knight.find(params[:knight].to_i)
     @horse.add_knight_id(@knight.id)
-    @horse.save
     @knight.add_horse(@horse)
     erb(:'knights/show')
 end

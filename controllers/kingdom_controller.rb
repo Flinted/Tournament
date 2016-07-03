@@ -12,10 +12,14 @@ end
 #new
 get '/kingdoms/new' do
   @kingdoms = Kingdom.all
-  @knights = Knight.all
   erb(:'kingdoms/new')
 end
 
+get '/kingdoms/knights' do
+  @kingdoms = Kingdom.all
+  @knights = Knight.all
+  erb(:'kingdoms/knights')
+end
 # create
 post '/kingdoms' do
   @kingdom = Kingdom.new(params)

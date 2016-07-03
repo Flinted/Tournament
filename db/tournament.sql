@@ -30,7 +30,7 @@ CREATE TABLE knights(
 
 CREATE TABLE lists(
   id SERIAL8 primary key,
-  knight_id INT8 references knights(id)
+  knight_id INT8 references knights(id) on delete cascade
 );
 
 CREATE TABLE events(

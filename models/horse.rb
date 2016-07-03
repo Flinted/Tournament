@@ -11,7 +11,6 @@ class Horse
     @knight_id=options['knight_id'].to_i
   end
 
-
   # DATABASE FUNCTIONS
     def save()
       sql = "INSERT INTO horses (name,  img, knight_id) VALUES ('#{@name}','#{@img}' ,#{@knight_id} ) RETURNING *"
@@ -51,5 +50,7 @@ class Horse
 
     def add_knight_id(id)
       @knight_id=id
+      sql = "UPDATE horses SET knight_id = #{@knight_id}  WHERE id = #{@id}"
+      run(sql)
     end
 end

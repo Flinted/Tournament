@@ -1,12 +1,15 @@
 require_relative('../db/sql_runner')
+require_relative('trophy')
+require_relative('event')
 require('pry-byebug')
 
 class Ranking
 
-  def initialize(options)
-    @knights = options['knights']
-    @events = options['events']
-    @kingdoms = options['kingdoms']
+  def initialize()
+    @knights = nil
+    @events = nil
+    @kingdoms = nil
+    refresh()
   end
 
   # gets specific trophy type as array of arrays carrying knight id in [0]
@@ -27,7 +30,6 @@ class Ranking
     silver = get_type_trophies("silver")
     bronze = get_type_trophies("bronze")
     tin = get_type_trophies("tin")
-
     trophies = {'gold' => gold, 'silver' => silver, 'bronze' => bronze, 'tin' => tin }
     return trophies
   end
@@ -37,7 +39,7 @@ class Ranking
     @knights = Knight.all
     @events = Event.all
     @kingdoms = Kingdom.all
-    start()
+    run_results()
   end
   
   # gets correct knight from array without new instance to protect trophies
@@ -49,7 +51,7 @@ class Ranking
   end
 
   # runs through results and distributes trophies
-  def start()
+  def run_results()
     sql = "SELECT * FROM results"
     results = run(sql)
     results.each do |result|
@@ -59,4 +61,9 @@ class Ranking
       knight.add_trophy(trophy)
     end
   end
+
+  def rank_knights()
+    @knights.sort {|a,b| b.get_points <=> a.get_points}
+  end
+
 end

@@ -48,6 +48,34 @@ body {
   border: 2px double black;
   box-shadow: 2px 2px 3px;
 }
+
+.flag_sizer{
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px double black;
+  box-shadow: 2px 2px 3px;
+}
+
+.portrait_sizer{
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px double black;
+  box-shadow: 2px 2px 3px;
+}
+
+.thumbnail {
+  width: 100%;
+}
 .order {
   background-color: #541101;
   border: 2px solid black;

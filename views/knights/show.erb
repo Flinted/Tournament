@@ -1,9 +1,9 @@
 <p><%=@knight.name%></p>
-<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=@knight.img%>"></div>
+<div class = "portrait_sizer"><img class = "thumbnail" src="<%=@knight.img%>"></div>
 <h1>Fighting for:</h1>
 <h1><%=Kingdom.find(@knight.nation_id).name%></h1>
 
-<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=Kingdom.find(@knight.nation_id).flag%>"></div> 
+<div class = "flag_sizer"><img class = "thumbnail" src="<%=Kingdom.find(@knight.nation_id).flag%>"></div> 
 
 <hr>
 
