@@ -1,9 +1,9 @@
 <h1><%=@event.name %></h1>
 <h2><%=@event.max  %> competitors can compete</h2>
-<form>
+<form action="/stage/<%=@event.id%>/new" method="post">
 <label for="knight">Knights:</label>
 <select name="knight">
-    <% @list.knights.each do |knight|%>
+    <%@list.knights.each do |knight|%>
         <option value="<%= knight.id %>"><%= knight.name %></option>
     <% end %>
  <input type='submit' value="Add Knight">
@@ -11,11 +11,9 @@
 
 <h2>Current competitors! <%=@event.competitor_count%>/<%=@event.max%></h2>
 <% if @event.competitor_count == 0 %>
-
     <h2>No competitors yet.</h2>
-
 <% else %>
-    <% @events.competitors.each do |competitor| %>
+    <% @event.competitors.each do |competitor| %>
     <div class="order">
     <b><a href="/knights/<%=competitor.id%>"><%= competitor.name()%></a></b>
     <div class = "thumbnail_sizer"><a href="/knights/<%= competitor.id%>"><img class = "thumbnail" src="<%=competitor.img%>"></a></div>

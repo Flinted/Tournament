@@ -1,8 +1,8 @@
 require_relative('../db/sql_runner')
-
+require ('pry-byebug')
 class Event
 
-  attr_reader(:name,:id,:type,:family,:img,:max,:prize,:competitors,:event_date)
+  attr_reader(:name,:id,:type,:family,:img,:max,:prize,:track,:competitors,:event_date)
 
   def initialize(options)
     @id= options['id'].to_i
@@ -13,6 +13,7 @@ class Event
     @img=options['img']
     @prize=options['prize'].to_i
     @event_date= options['event_date']
+    @track = options['track'] ==  nil  ?   "" :  options['track']
     @competitors=[]
   end
 
@@ -28,6 +29,20 @@ class Event
     end
   end
 
+  def tracker(knight)
+      @track = @track + "-#{knight}"
+      sql = "UPDATE events SET track = '#{@track}' WHERE id= #{id}"
+      run(sql)
+  end
+
+  def populate
+    if @track.length != 0
+        ids = @track.split("-")
+          ids.each do |id|
+          add_knight(Knight.find(id.to_i)) unless id.length == 0
+        end
+    end
+  end
 
   # DATABASE FUNCTIONS
   def run_event()
@@ -47,7 +62,7 @@ class Event
   end
 
   def save()
-    sql = "INSERT INTO events (name, type, family, max, img, prize, event_date) VALUES ('#{@name}', '#{@type}' ,'#{@family}' ,#{@max},'#{@img}',#{@prize},'#{@event_date}' ) RETURNING *"
+    sql = "INSERT INTO events (name, type, family, max, img, prize, event_date, track) VALUES ('#{@name}', '#{@type}' ,'#{@family}' ,#{@max},'#{@img}',#{@prize},'#{@event_date}', '#{@track}') RETURNING *"
     return Event.map_item(sql)
   end
 

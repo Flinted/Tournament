@@ -38,6 +38,7 @@ CREATE TABLE events(
   name VARCHAR(255),
   type VARCHAR(255),
   family VARCHAR(255),
+  track VARCHAR(510),
   max INT2,
   prize INT2,
   img VARCHAR(255),

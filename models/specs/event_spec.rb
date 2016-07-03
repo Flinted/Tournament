@@ -28,6 +28,16 @@ class TestEvent < MiniTest::Test
         'prize' => 500,
         'event_date' => '2016-03-30'
         })
+
+      @event2=Event.new({
+        'name' => 'fast joust',
+        'type' => 'jousting',
+        'family'=>'mounted',
+        'max' => 3,
+        'img' => 'www.google.co.uk',
+        'prize' => 500,
+        'event_date' => '2016-03-30'
+        })
     end
 
     def test_setup
@@ -46,4 +56,15 @@ class TestEvent < MiniTest::Test
       assert_equal("Event Full", @event1.add_knight(@knight2))
     end
 
+    def test_knight_track
+        @event2.tracker(13)
+        assert_equal("-13", @event2.track)
+    end
+
+    def test_event_populate
+      @event2.tracker(1)
+      @event2.tracker(2)
+      @event2.populate
+      assert_equal(2, @event2.competitor_count)
+    end
 end

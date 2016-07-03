@@ -28,4 +28,10 @@ class List
     sql = "DELETE FROM lists"
     run(sql)
   end
+
+  def trim(event)
+    event.competitors.each do |knight|
+      @knights.delete(knight)
+    end
+  end
 end
