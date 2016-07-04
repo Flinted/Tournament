@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 require ('pry-byebug')
 class Event
 
-  attr_reader( :name, :id, :type, :family, :img, :max, :prize, :track, :competitors, :event_date)
+  attr_reader( :name, :id,:ran, :type, :family, :img, :max, :prize, :track, :competitors, :event_date)
 
   def initialize(options)
     @id= options['id'].to_i
@@ -15,6 +15,7 @@ class Event
     @event_date= options['event_date']
     @track = options['track'] ==  nil  ?   "" :  options['track']
     @competitors=[]
+    @ran = options['ran'] != 't'  ?  false : true
   end
 
   def competitor_count()
@@ -42,11 +43,18 @@ class Event
           add_knight(Knight.find(id.to_i)) unless id.length == 0
         end
     end
+    @competitors.each do |competitor|
+      competitor.get_trophies()
+    end
   end
 
   def competitor_ids
     ids = @competitors.map {|knight| knight.id}
     return ids
+  end
+
+  def clear
+    @competitors.clear
   end
 
   # DATABASE FUNCTIONS
@@ -61,10 +69,23 @@ class Event
         position += 1
         competitor.add_trophy(trophy)
       end
+      @ran = true
+      sql = "UPDATE events SET ran = '#{@ran}' WHERE id = #{id}"
+      run(sql)
     else
       return "no competitors!"
     end
   end
+
+  def get_finish_positions()
+    positions =[]
+    @competitors.each do |competitor|
+        competitor.trophies.each do |trophy|
+               positions << [Knight.find(competitor.id), trophy.position]  if trophy.event_id == @id
+              end
+        end
+      return  positions.sort {|a,b| a[1] <=> b[1]}
+  end  
 
   def save()
     sql = "INSERT INTO events (name, type, family, max, img, prize, event_date, track) VALUES ('#{@name}', '#{@type}' ,'#{@family}' ,#{@max},'#{@img}',#{@prize},'#{@event_date}', '#{@track}') RETURNING *"

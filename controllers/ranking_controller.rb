@@ -4,6 +4,11 @@ require_relative('../models/ranking')
 require_relative('../models/horse')
 require_relative('../models/kingdom')
 
+get '/rankings' do
+  redirect to ('/rankings/kingdoms')
+end
+
+
 # knights
 get '/rankings/knights' do
   @ranking = Ranking.new

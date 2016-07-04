@@ -1,10 +1,9 @@
 <h2>Knights by points:</h2>
-
 <% @knight_rank.each do |knight| %>
  <div class="order">
- <p><a href="/knights/<%=knight.id%>"><%= knight.name()%></a> of <%=Kingdom.find(knight.nation_id).name %></p>
- <div class = "portrait_sizer"><a href="/knights/<%= knight.id%>"><img class = "thumbnail" src="<%=knight.img%>"></a></div>
- <hr>
+ <p><a href="/knights/<%=knight.id%>"><%= knight.name()%></a> of the <%=Kingdom.find(knight.nation_id).name %></p>
  <p><%=knight.trophy_count%> trophies with <%=knight.get_points%> points</p>
+ <div class = "portrait_sizer"><a href="/knights/<%= knight.id%>"><img class = "thumbnail" src="<%=knight.img%>"></a></div>
+ 
  </div>
 <%end%>

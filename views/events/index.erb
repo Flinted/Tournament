@@ -6,7 +6,11 @@
  <p>Event type: <%= event.type()%></p>
  <p>Event group: <%= event.family()%></p>
  <p>Max Competitors: <%= event.max()%></p>
- <div class = "flag_sizer"><a href="/events/<%= event.id%>"><img class = "thumbnail" src="<%=event.img%>"></a></div>
- <hr>
+ <div class = "thumbnail_sizer"><a href="/events/<%= event.id%>"><img class = "thumbnail" src="<%=event.img%>"></a></div>
+ <%if event.ran == true %>
+ <p>ran on <%= event.event_date %> </p>
+ <%else  %>
+  <p>still to be held</p>
+ <%end  %>
  </div>
 <%end%>

@@ -42,7 +42,8 @@ CREATE TABLE events(
   max INT2,
   prize INT2,
   img VARCHAR(255),
-  event_date DATE
+  event_date DATE,
+  ran BOOLEAN
 );
 
 CREATE TABLE results(

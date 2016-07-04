@@ -34,9 +34,9 @@ Kingdom.delete_all
 @list=List.new([@knight2,@knight1,@knight3,@knight4])
 @list.save
 
-@event1=Event.new({'name' => 'fast joust','type' => 'jousting','family'=>'mounted','max' => 5, 'img' => 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Jousting_at_Hever_Castle,_Kent_(5)_-_geograph.org.uk_-_1453366.jpg','prize' => 500,'event_date' => '2016-03-30'}).save
-@event2=Event.new({'name' => '200yd archery','type' => 'archery','family'=>'ranged','max' => 5, 'img' => 'http://medieval-time-period.weebly.com/uploads/1/7/5/7/17574385/712630_orig.jpgm','prize' => 200,'event_date' => '2016-05-30'}).save
-@event1=Event.new({'name' => 'Sword & Shield','type' => 'combat on foot','family'=>'On foot','max' => 6, 'img' => 'http://schmitt.seafog.net/PeterSchmitt/wp-content/uploads/2013/01/17SwordFight11-1024x977.jpg','prize' => 400,'event_date' => '1216-03-30'}).save
+@event1=Event.new({'name' => 'fast joust','type' => 'jousting','family'=>'mounted','max' => 5, 'img' => '/events/joust.png','prize' => 500,'event_date' => '2016-03-30'}).save
+@event2=Event.new({'name' => '200yd archery','type' => 'archery','family'=>'ranged','max' => 5, 'img' => '/events/archery.png','prize' => 200,'event_date' => '2016-05-30'}).save
+@event1=Event.new({'name' => 'Sword & Shield','type' => 'combat on foot','family'=>'On foot','max' => 6, 'img' => '/events/sword.png','prize' => 400,'event_date' => '1216-03-30'}).save
 
 @event1.add_knight(@knight1)
 @event1.add_knight(@knight2)

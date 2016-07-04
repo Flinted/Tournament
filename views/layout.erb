@@ -5,7 +5,6 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
   <link href='https://fonts.googleapis.com/css?family=Metamorphous' rel='stylesheet' type='text/css'>
   <body>
-    <!-- <img src='banner.jpg' class = 'banner'> -->
     <div class="navbar">
       <div class="dropdown">
         <a href="/rankings"><button class="dropbtn">Rankings</button></a>
@@ -41,9 +40,30 @@
         </div>
       </div>
     </div>
+    <div class= 'spacer'></div>
+    <div class = 'leftbar'>
+        <div class = "icons">
+          <img class = "thumbnail" src="/events/joust.png"> 
+          <img class = "thumbnail" src="/events/sword.png"> 
+          <img class = "thumbnail" src="/events/staff.png"> 
+          <img class = "thumbnail" src="/events/wrestle.png"> 
+          <img class = "thumbnail" src="/events/archery.png"> 
+          <img class = "thumbnail" src="/events/crossbow.png"> 
+        </div>
+    </div>
 
     <div class = "content">
       <%=yield%>
+    </div>
+    <div class = 'rightbar'>
+        <div class = "icons">
+          <img class = "thumbnail" src="/events/horseshoe.png"> 
+          <img class = "thumbnail" src="/events/colf.png"> 
+          <img class = "thumbnail" src="/events/boules.png"> 
+          <img class = "thumbnail" src="/events/hammer.png"> 
+          <img class = "thumbnail" src="/events/archery.png"> 
+          <img class = "thumbnail" src="/events/team.png"> 
+          </div>
     </div>
       </body>
       </html>

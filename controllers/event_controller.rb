@@ -35,7 +35,8 @@ end
 # show
 get '/events/:id' do
   @event = Event.find(params[:id])
-  # @kingdoms = Kingdom.all
+  @event.populate()
+  @positions = @event.get_finish_positions
   erb(:'events/show')
 end
 

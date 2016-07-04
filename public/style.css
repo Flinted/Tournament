@@ -2,35 +2,81 @@ body {
   height:100%;
   font-family: 'Metamorphous', cursive;
   text-align: center; 
-  background-image: url('https://s-media-cache-ak0.pinimg.com/736x/f7/c4/30/f7c43039796b5f26e21cb748c7fd483a.jpg');
+  background-image: url('/wood.png');
+  background-color: #000000;
+  background-attachment: fixed;
 }
 .banner{
   margin: auto;
   width: 50%;
   margin-bottom: -20px;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
 .navbar {
   width: 100%;
-  height: 90px;
-  margin-top: -20px;
+  height: 70px;
+  margin-top: -10px;
   margin-left: -10px;
-  padding-top: 10px;
+  padding-top: 30px;
   background-image: url('http://www.hinesofoxford.com/media/catalog/category/Copy_of_938_Bayeux_-_Battle_of_Hastings_1.jpg');
   background-size: contain;
   position:fixed;
-  box-shadow: 5px 5px 15px black;
+  box-shadow: 5px 5px 25px black;
 }
 
+.spacer {
+  height:110px;
+}
 /*general container for pages*/
 .content {
   clear:both;
-  /*background-color: #55967e;*/
-  background-color: #014556;
+  background-color: #7d6137;
+  background-image: url('/leather.png');
   min-height:800px;
   display: inline-block;
   width:75%;
-  padding:90px;
+  padding:5px;
   margin: auto;
+  box-shadow: 5px 5px 30px black;
+}
+
+.leftbar{ 
+  width:11%;
+  float:left;
+  min-height: 800px;
+  background-image: url('banner_red.png');
+ background-size: contain;
+ background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  /*position: fixed;*/
+
+
+}
+
+.rightbar{
+  width:11%;
+  float:right;
+  min-height: 800px;
+  background-image: url('banner_blue.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  /*position: fixed;*/
+
+
+}
+
+.icons {
+  width: 70%;
+  height: 60%;
+  padding-top: 50px;
+  margin:auto;
 }
 .shield {
   /*border: 2px solid black;*/
@@ -57,8 +103,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px double black;
-  box-shadow: 2px 2px 3px;
 }
 
 .flag_sizer{
@@ -110,13 +154,12 @@ body {
 }
 
 .miniknight {
-  width: 25%;
-  border: 2px solid black;
+  width: 30%;
+  border: 2px dashed #7d6137;
   overflow: hidden;
   margin: auto;
   display: inline-block;
   align-items: center; 
-  background-color: white;
 }
 
 .thumbnail {
@@ -124,7 +167,7 @@ body {
 }
 .order {
   /*background-color: #541101;*/
-  background-color: grey;
+  /*background-color: grey;*/
   /*border: 2px solid black;*/
   margin-bottom: 5px;
 }
@@ -132,6 +175,8 @@ body {
 /*MENU STUFF*/
 /* Dropdown Button */
 .dropbtn {
+    background-image: url('/paper.png');
+    background-size: cover;
     background-color: #6d819c;
     border: 2px solid black;
     width:150px;
@@ -141,7 +186,7 @@ body {
     border: none;
     cursor: pointer;
     font-family: 'Metamorphous', cursive;
-    box-shadow: 3px 3px 5px black;
+    box-shadow: 5px 5px 15px black;
 }
 
 .dropdown .dropbtn a {

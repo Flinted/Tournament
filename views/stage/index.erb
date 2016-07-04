@@ -2,15 +2,22 @@
  <label for="type">Event:</label>
  <select name="type">
  <% @events.each do |event|%>
-    <option value="<%= event.id %>"><%= event.name %></option>
+      <%if event.ran == false  %>
+           <option value="<%= event.id %>"><%= event.name %></option>
+      <% end %>
  <% end %>
 <input type='submit' value="Stage Event">
 </form>
-
-<hr>
+<br>
+<br>
 <% @events.each do |event| %>
- <div class="order">
- <b><a href="/events/<%=event.id%>"><%= event.name()%></a></b>
- <div class = "thumbnail_sizer"><a href="/events/<%= event.id%>"><img class = "thumbnail" src="<%=event.img%>"></a></div>
- </div>
+       <div class="miniknight">
+       <b><a href="/events/<%=event.id%>"><%= event.name()%></a></b>
+       <div class = "thumbnail_sizer"><a href="/events/<%= event.id%>"><img class = "thumbnail" src="<%=event.img%>"></a></div>
+       <%if event.ran == true %>
+           <p>ran on <%= event.event_date %> </p>
+       <%else  %>
+          <p>still to be held</p>
+       <%end  %>
+       </div>
 <%end%>

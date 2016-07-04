@@ -16,9 +16,9 @@
     <h2>No competitors yet.</h2>
 <% else %>
     <% @event.competitors.each do |competitor| %>
-    <div class="order">
+    <div class="miniknight">
     <b><a href="/knights/<%=competitor.id%>"><%= competitor.name()%></a></b>
-    <div class = "thumbnail_sizer"><a href="/knights/<%= competitor.id%>"><img class = "thumbnail" src="<%=competitor.img%>"></a></div>
+    <div class = "mini_portrait"><a href="/knights/<%= competitor.id%>"><img class = "thumbnail" src="<%=competitor.img%>"></a></div>
     </div>
     <%end%>
 <% end %>
