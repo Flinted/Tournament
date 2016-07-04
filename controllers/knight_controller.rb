@@ -10,7 +10,7 @@ require_relative('../models/ranking')
 get '/knights' do
   @horses= Horse.all()
   @knights = Knight.all()
-  @kingdoms = Kingdom.all
+  # @kingdoms = Kingdom.all()
   erb(:'knights/index')
 end
 

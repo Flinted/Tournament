@@ -1,5 +1,6 @@
 <div class = 'shield'><h1><%=@knight.name%></h1>
 <div class = "portrait_sizer"><img class = "thumbnail" src="<%=@knight.img%>"></div>
+<p> Wealth: <%=@knight.wealth %> sovereigns
 <div class = "flag_sizer"><img class = "thumbnail" src="<%=Kingdom.find(@knight.nation_id).flag%>"></div> 
 
 <div>
