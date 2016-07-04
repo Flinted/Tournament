@@ -1,10 +1,8 @@
 body {
   height:100%;
   font-family: 'Metamorphous', cursive;
-  text-align: center;
-  background-color: white;
-  /*background-color: #263959;*/
-  /*background-image: url('tileable-leather.jpg');*/
+  text-align: center; 
+  background-image: url('https://s-media-cache-ak0.pinimg.com/736x/f7/c4/30/f7c43039796b5f26e21cb748c7fd483a.jpg');
 }
 .banner{
   margin: auto;
@@ -14,22 +12,29 @@ body {
 .navbar {
   width: 100%;
   height: 90px;
+  margin-top: -20px;
+  margin-left: -10px;
+  padding-top: 10px;
+  background-image: url('http://www.hinesofoxford.com/media/catalog/category/Copy_of_938_Bayeux_-_Battle_of_Hastings_1.jpg');
+  background-size: contain;
+  position:fixed;
+  box-shadow: 5px 5px 15px black;
 }
 
 /*general container for pages*/
 .content {
+  clear:both;
   /*background-color: #55967e;*/
-  /*background-color: #014556;*/
-  background-color: white;
+  background-color: #014556;
   min-height:800px;
   display: inline-block;
   width:75%;
-  padding:5px;
+  padding:90px;
   margin: auto;
 }
 .shield {
   /*border: 2px solid black;*/
-  background-image: url('https://openclipart.org/image/2400px/svg_to_png/214815/Shield_004_SPenguin.png');
+  /*background-image: url('/shield.png');*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -76,8 +81,42 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*border: 2px double black;*/
-  /*box-shadow: 2px 2px 3px;*/
+  border: 2px double black;
+  box-shadow: 2px 2px 3px;
+}
+
+.mini_portrait{
+  width: 100px;
+  height: 150px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px double black;
+  box-shadow: 2px 2px 3px;
+}
+
+.mini_landscape{
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px double black;
+  box-shadow: 2px 2px 3px;
+}
+
+.miniknight {
+  width: 25%;
+  border: 2px solid black;
+  overflow: hidden;
+  margin: auto;
+  display: inline-block;
+  align-items: center; 
+  background-color: white;
 }
 
 .thumbnail {
@@ -86,7 +125,7 @@ body {
 .order {
   /*background-color: #541101;*/
   background-color: grey;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   margin-bottom: 5px;
 }
 

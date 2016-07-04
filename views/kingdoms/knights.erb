@@ -1,16 +1,16 @@
 <h2>Knights by Kingdom:</h2>
-
 <% @kingdoms.each do |kingdom| %>
  <div class="order">
  <h1><a href="/kingdoms/<%=kingdom.id%>"><%= kingdom.name()%></a></h1>
     <% @knights.each do |knight|%>
-    <% if knight.nation_id == kingdom.id %>
-        <p><%= knight.name %></p> <br>
-        <% knight.get_trophies %>
-        <p><%=knight.trophy_count%> trophies with <%=knight.get_points%> points</p>
-        <div class = "portrait_sizer"><a href="/knights/<%= knight.id%>"><img class = "thumbnail" src="<%=knight.img%>"></a></div>
+          <% if knight.nation_id == kingdom.id %>
+              <div class = "miniknight">
+                  <p><%= knight.name %></p>
+                  <p><% knight.get_trophies %></p>
+                  <p><%=knight.trophy_count%> trophies with <%=knight.get_points%> points</p>
+                  <div class = "mini_portrait"><a href="/knights/<%= knight.id%>"><img class = "thumbnail" src="<%=knight.img%>"></a></div>
+              </div>
+          <% end %>
     <% end %>
-    <% end %>
- <hr>
  </div>
 <%end%>

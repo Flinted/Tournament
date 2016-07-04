@@ -5,6 +5,7 @@ require_relative('../models/horse')
 
 # index
 get '/horses' do
+  @knights= Knight.all
   @horses = Horse.all()
   erb(:'horses/index')
 end

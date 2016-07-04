@@ -1,14 +1,15 @@
-<h2>Horses</h2>
+<%= erb :'knights/stables' %>
 
+<h2>Horses</h2>
 <% @horses.each do |horse| %>
-      <div class="order">
-      <b><a href="/horses/<%=horse.id%>"><%= horse.name()%></a></b>
-      <div class = "flag_sizer"><a href="/horses/<%= horse.id%>"><img class = "thumbnail" src="<%=horse.img%>"></a></div>
-      <%if horse.knight_id != 0  %>
-            <p>ridden by <%=Knight.find(horse.knight_id).name %></p>
-      <% else %>
-            <p>Is in the stable.</p>
-      <%end %>
-      <hr>
+      <div class="miniknight">
+                  <b><a href="/horses/<%=horse.id%>"><%= horse.name()%></a></b>
+                  <div class = "mini_landscape"><a href="/horses/<%= horse.id%>"><img class = "thumbnail" src="<%=horse.img%>"></a></div>
+                  <%if horse.knight_id != 0  %>
+                        <p>ridden by <%=Knight.find(horse.knight_id).name %></p>
+                  <% else %>
+                        <p>Is in the stable.</p>
+                  <%end %>
+
       </div>
 <%end%>

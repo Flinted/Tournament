@@ -1,9 +1,10 @@
+<%= erb :'kingdoms/new' %>
+
 <h2>Kingdoms</h2>
 
 <% @kingdoms.each do |kingdom| %>
  <div class="order">
  <p><a href="/kingdoms/<%=kingdom.id%>"><%= kingdom.name()%></a></p>
  <div class = "flag_sizer"><img class = "thumbnail" src="<%=kingdom.flag%>"></div>
- <hr>
  </div>
 <%end%>
