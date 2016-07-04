@@ -2,7 +2,9 @@ body {
   height:100%;
   font-family: 'Metamorphous', cursive;
   text-align: center; 
-  background-image: url('/wood.png');
+  /*background-image: url('/wood.png');*/
+  background-image: url('http://randomwallpapers.net/green-hills-nature-1920x1080-wallpaper9156.jpg');
+  background-size:cover;
   background-color: #000000;
   background-attachment: fixed;
 }
@@ -17,8 +19,7 @@ a {
   color: black;
 }
 
-
-.navbar {
+/*.navbar {
   width: 100%;
   height: 70px;
   margin-top: -10px;
@@ -28,22 +29,40 @@ a {
   background-size: contain;
   position:fixed;
   box-shadow: 5px 5px 25px black;
+}*/
+
+.navbar {
+  width: 70%;
+  min-width: 800px;
+  height: 70px;
+  margin-top: -2%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 30px;
+  background-image: url('http://www.hinesofoxford.com/media/catalog/category/Copy_of_938_Bayeux_-_Battle_of_Hastings_1.jpg');
+  background-size: contain;
+  position:fixed;
+  box-shadow: 5px 5px 25px black;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius:100%;
+
 }
 
 .spacer {
-  height:110px;
+  height:130px;
 }
 /*general container for pages*/
 .content {
   clear:both;
-  background-color: #7d6137;
-  background-image: url('/leather.png');
-  min-height:800px;
+  /*background-color: #7d6137;*/
+  /*background-color: #e9d1bb;*/
+  background-image: url('/opacity.png');
   display: inline-block;
-  width:75%;
+  width:60%;
   padding:5px;
   margin: auto;
   box-shadow: 5px 5px 30px black;
+  border-radius: 10px;
 }
 
 .leftbar{ 
@@ -53,8 +72,8 @@ a {
   background-image: url('banner_red.png');
  background-size: contain;
  background-repeat: no-repeat;
-  /*background-attachment: fixed;*/
-  /*position: fixed;*/
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 
 
 }
@@ -66,8 +85,9 @@ a {
   background-image: url('banner_blue.png');
   background-size: contain;
   background-repeat: no-repeat;
-  /*background-attachment: fixed;*/
-  /*position: fixed;*/
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+
 
 
 }
@@ -166,7 +186,7 @@ a {
 }
 
 .miniknight {
-  width: 30%;
+  width: 32%;
   border: 2px dashed #7d6137;
   overflow: hidden;
   margin: auto;
@@ -185,7 +205,7 @@ a {
 }
 
 .rankings{
-  width: 45%;
+  width: 49%;
   border: 2px dashed #7d6137;
   overflow: hidden;
   margin: auto;
