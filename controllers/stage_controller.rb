@@ -30,5 +30,9 @@ post '/stage/:id/new' do
   erb(:'stage/new')
 end
 
-
-
+post '/stage/:id/run' do
+  @event = Event.find(params['id'])
+  @event.populate()
+  @event.run_event()
+  redirect to '/rankings/knights'
+end

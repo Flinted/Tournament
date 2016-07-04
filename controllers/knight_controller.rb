@@ -3,6 +3,8 @@ require_relative('../db/sql_runner')
 require_relative('../models/knight')
 require_relative('../models/horse')
 require_relative('../models/kingdom')
+require_relative('../models/ranking')
+
 
 # index
 get '/knights' do
@@ -42,7 +44,7 @@ end
 # show
 get '/knights/:id' do
   @knight = Knight.find(params[:id])
-  # @kingdoms = Kingdom.all
+  @knight.get_trophies()
   erb(:'knights/show')
 end
 

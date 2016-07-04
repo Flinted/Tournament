@@ -1,15 +1,20 @@
-<p><%=@knight.name%></p>
+<div class = 'shield'><h1><%=@knight.name%></h1>
 <div class = "portrait_sizer"><img class = "thumbnail" src="<%=@knight.img%>"></div>
-<h1>Fighting for:</h1>
-<h1><%=Kingdom.find(@knight.nation_id).name%></h1>
-
 <div class = "flag_sizer"><img class = "thumbnail" src="<%=Kingdom.find(@knight.nation_id).flag%>"></div> 
 
-<hr>
+<div>
+<h3>Fighting for:</h3>
+<h3><%=Kingdom.find(@knight.nation_id).name%></h3>
+  <%@knight.trophies.each do |trophy|  %>
+  <p>Won a <%=trophy.type%> trophy in the <%=trophy.event%> coming in position <%=trophy.position%>.</p>
+  <%end  %>
+
 
 <a href="/knights/<%=@knight.id%>/edit">Edit Knight</a>
 
 <form action="/knights/<%=@knight.id%>/delete" method="post">
-<hr>
+
 <input type="submit" value="Delete Knight">
 </form>
+</div>
+</div>

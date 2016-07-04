@@ -2,8 +2,9 @@ body {
   height:100%;
   font-family: 'Metamorphous', cursive;
   text-align: center;
-  background-color: #263959;
-  background-image: url('tileable-leather.jpg');
+  background-color: white;
+  /*background-color: #263959;*/
+  /*background-image: url('tileable-leather.jpg');*/
 }
 .banner{
   margin: auto;
@@ -18,19 +19,25 @@ body {
 /*general container for pages*/
 .content {
   /*background-color: #55967e;*/
-  background-color: #014556;
+  /*background-color: #014556;*/
+  background-color: white;
   min-height:800px;
   display: inline-block;
   width:75%;
-  float:left;
   padding:5px;
-  margin-right: 5px;
-  border:2px solid black;
+  margin: auto;
 }
-
+.shield {
+  /*border: 2px solid black;*/
+  background-image: url('https://openclipart.org/image/2400px/svg_to_png/214815/Shield_004_SPenguin.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+}
 .sidebar{
   min-height:800px;
-  width: 280px;
+  width: 22%;
   float: right;
   background-color: #55967e;
   border: 3px solid black;
@@ -69,19 +76,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px double black;
-  box-shadow: 2px 2px 3px;
+  /*border: 2px double black;*/
+  /*box-shadow: 2px 2px 3px;*/
 }
 
 .thumbnail {
   width: 100%;
 }
 .order {
-  background-color: #541101;
+  /*background-color: #541101;*/
+  background-color: grey;
   border: 2px solid black;
   margin-bottom: 5px;
 }
-
 
 /*MENU STUFF*/
 /* Dropdown Button */

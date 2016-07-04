@@ -94,7 +94,7 @@ def get_trophies()
   results = run(sql)
   trophies = results.map {|result| Trophy.new(Event.find(result['event_id'].to_i),result['position'].to_i)}
   trophies.each do |trophy|
-    add_trophy(trophy)
+  add_trophy(trophy)
   end
 end
 end

@@ -66,4 +66,9 @@ class Ranking
     @knights.sort {|a,b| b.get_points <=> a.get_points}
   end
 
+  def rank_kingdoms()
+    kingdoms = @kingdoms.each {|kingdom| kingdom.get_trophies()}
+    kingdoms.sort {|a,b| b.get_points <=> a.get_points}
+  end
+  
 end

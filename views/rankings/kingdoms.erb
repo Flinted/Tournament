@@ -1,0 +1,10 @@
+<h2>Kingdoms by points:</h2>
+
+<% @kingdom_rank.each do |kingdom| %>
+ <div class="order">
+ <p><a href="/kingdoms/<%=kingdom.id%>"><%= kingdom.name()%></a></p>
+ <div class = "flag_sizer"><a href="/kingdoms/<%= kingdom.id%>"><img class = "thumbnail" src="<%=kingdom.flag%>"></a></div>
+ <hr>
+ <p><%=kingdom.trophy_count%> trophies with <%=kingdom.get_points%> points</p>
+ </div>
+<%end%>

@@ -20,6 +20,7 @@ get '/kingdoms/knights' do
   @knights = Knight.all
   erb(:'kingdoms/knights')
 end
+
 # create
 post '/kingdoms' do
   @kingdom = Kingdom.new(params)
