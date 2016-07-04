@@ -49,7 +49,8 @@ a {
 }
 
 .spacer {
-  height:130px;
+  height:100px;
+  text-align: left;
 }
 /*general container for pages*/
 .content {
@@ -66,30 +67,29 @@ a {
 }
 
 .leftbar{ 
-  width:11%;
+  width:15%;
   float:left;
-  min-height: 800px;
+  align-items: center;
+  min-height: 590px;
   background-image: url('banner_red.png');
+  background-position: center;
  background-size: contain;
  background-repeat: no-repeat;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
-
-
 }
 
+
 .rightbar{
-  width:11%;
+  width:15%;
   float:right;
-  min-height: 800px;
+  min-height: 590px;
   background-image: url('banner_blue.png');
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
-
-
-
 }
 
 .icons {
