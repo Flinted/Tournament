@@ -5,7 +5,7 @@
  <div class="rankings">
  <h2>Position <%=count%></h2>
  <%count += 1  %>
- <p><a href="/knights/<%=knight.id%>"><%= knight.name()%></a> of the <%=Kingdom.find(knight.nation_id).name %></p>
+ <p><a href="/knights/<%=knight.id%>"><%= knight.name()%></a> of the <%=knight.get_kingdom_name%></p>
  <p><%=knight.trophy_count%> trophies with <%=knight.get_points%> points</p>
  <div class = "portrait_sizer"><a href="/knights/<%= knight.id%>"><img class = "thumbnail" src="<%=knight.img%>"></a></div>
  

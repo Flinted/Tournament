@@ -22,7 +22,7 @@ get '/knights/new' do
 end
 
 get '/knights/search' do
-  @knights = Knight.search(params['search'])
+  @knights = Knight.search(params['search'].downcase)
   erb(:'knights/result')
 end
 

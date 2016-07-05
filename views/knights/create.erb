@@ -1,5 +1,5 @@
 <h1>Thank you!</h1>
-<p><%= @knight.name%> of the <%=Kingdom.find(@knight.nation_id).name%>added to the list</p>
+<p><%= @knight.name%> of the <%=@knight.get_kingdom_name%>added to the list</p>
 
 <div class = "portrait_sizer"><img class = "thumbnail" src="<%=@knight.img%>"></div>
 

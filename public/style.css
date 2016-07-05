@@ -44,11 +44,19 @@ form input[type=radio]{
   box-shadow: 5px 5px 25px black;
   border-bottom-right-radius: 100%;
   border-bottom-left-radius:100%;
+}
 
+.home{
+margin-top: -10px;
+/*margin-left: 25px;*/
+margin-left: 2%;
+ width: 11%;
+ height: auto;
 }
 
 .spacer {
   height:100px;
+  text-align: left;
 }
 
 /*general container for pages*/
@@ -103,7 +111,7 @@ form input[type=radio]{
   background-position: center;
   background-size: contain;*/
   width: 100%;
-}*/
+}
 .sidebar{
   min-height:800px;
   width: 22%;
@@ -291,7 +299,6 @@ form input[type=radio]{
     background-color: #6d819c;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    /*border: 2px solid black;*/
     width:150px;
     color: white;
     padding: 10px;

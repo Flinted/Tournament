@@ -37,6 +37,15 @@ def remove_horse()
   @horse = nil
 end
 
+def get_kingdom()
+    kingdom = Kingdom.find(@nation_id)
+    return kingdom
+end
+
+def get_kingdom_name
+  return get_kingdom().name
+end
+
 def get_points()
   gold = 0
   silver = 0
@@ -100,13 +109,13 @@ def self.map_item(sql)
 end
 
 def self.search(search)
-sql= "SELECT * FROM knights WHERE name LIKE '%#{search}%'"
+sql= "SELECT * FROM knights WHERE lower(name) LIKE '%#{search}%'"
 knights = Knight.map_items(sql)
 return knights
 end
 
 def get_trophies()
-  sql = "SELECT * FROM results WHERE knight_id = #{id}"
+  sql = "SELECT * FROM results WHERE knight_id = #{@id}"
   results = run(sql)
   trophies = results.map {|result| Trophy.new(Event.find(result['event_id'].to_i),result['position'].to_i)}
   trophies.each do |trophy|

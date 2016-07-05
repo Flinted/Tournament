@@ -1,0 +1,10 @@
+<h1>Search results</h1>
+
+<%@knights.each do |knight|  %>
+ <div class="miniknight">
+ <p><a href="/knights/<%=knight.id%>"><%= knight.name()%> of the <%= knight.get_kingdom_name%></a></p>
+<%knight.get_trophies%>
+ <p>trophy count: <%=knight.trophy_count%> points: <%= knight.get_points %>
+ <div class = "mini_portrait"><a href="/knights/<%= knight.id%>"><img class = "thumbnail" src="<%=knight.img%>"></a></div>
+ </div>
+<%end  %>

@@ -1,11 +1,11 @@
 <div class = 'shield'><h1><%=@knight.name%></h1>
 <div class = "portrait_sizer"><img class = "thumbnail" src="<%=@knight.img%>"></div>
 <p> Wealth: <%=@knight.wealth %> sovereigns
-<div class = "flag_sizer"><img class = "thumbnail" src="<%=Kingdom.find(@knight.nation_id).flag%>"></div> 
+<div class = "flag_sizer"><img class = "thumbnail" src="<%=@knight.get_kingdom.flag%>"></div> 
 
 <div>
 <h3>Fighting for:</h3>
-<h3><%=Kingdom.find(@knight.nation_id).name%></h3>
+<h3><%=@knight.get_kingdom_name%></h3>
   <%@knight.trophies.each do |trophy|  %>
   <div class="trophy">
   <div class = "trophy_sizer"><img class = "thumbnail" src="/trophy/<%=trophy.type%>.png"></div> 

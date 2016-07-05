@@ -29,6 +29,5 @@ get '/rankings/sidebar' do
   binding.pry
   @ranking.refresh
   @kingdoms_rank = @ranking.rank_kingdoms()
-  # kingdoms_ranks =   @kingdoms_rank
   erb :'rankings/sidebar', :locals => {:kingdoms_ranks => @kingdoms_rank}
 end

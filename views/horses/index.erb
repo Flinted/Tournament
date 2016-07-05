@@ -8,6 +8,7 @@
                   <div class = "flag_sizer"><a href="/horses/<%= horse.id%>"><img class = "thumbnail" src="<%=horse.img%>"></a></div>
                   <%if horse.knight_id != 0  %>
                         <p>ridden by <%=Knight.find(horse.knight_id).name %></p>
+                      <div class = "mini_portrait"><img class = "thumbnail" src="<%=Knight.find(horse.knight_id).img %>"></div>
                   <% else %>
                         <p>Is in the stable.</p>
                   <%end %>
