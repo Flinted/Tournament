@@ -70,7 +70,7 @@ class Event
         competitor.add_trophy(trophy)
       end
       @ran = true
-      sql = "UPDATE events SET ran = '#{@ran}' WHERE id = #{id}"
+      sql = "UPDATE events SET ran = '#{@ran}' WHERE id = #{@id}"
       run(sql)
     else
       return "no competitors!"
@@ -88,7 +88,7 @@ class Event
   end  
 
   def save()
-    sql = "INSERT INTO events (name, type, family, max, img, prize, event_date, track) VALUES ('#{@name}', '#{@type}' ,'#{@family}' ,#{@max},'#{@img}',#{@prize},'#{@event_date}', '#{@track}') RETURNING *"
+    sql = "INSERT INTO events (name, type, family, max, img, prize, event_date, track) VALUES ('#{@name}', '#{@type}' ,'#{@family}' ,#{@max},'/event/#{@type}.png',#{@prize},'#{@event_date}', '#{@track}') RETURNING *"
     return Event.map_item(sql)
   end
 

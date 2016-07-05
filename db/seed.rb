@@ -34,9 +34,9 @@ Kingdom.delete_all
 @list=List.new([@knight2,@knight1,@knight3,@knight4])
 @list.save
 
-@event1=Event.new({'name' => 'fast joust','type' => 'jousting','family'=>'mounted','max' => 5, 'img' => '/events/joust.png','prize' => 500,'event_date' => '2016-03-30'}).save
-@event2=Event.new({'name' => '200yd archery','type' => 'archery','family'=>'ranged','max' => 5, 'img' => '/events/archery.png','prize' => 200,'event_date' => '2016-05-30'}).save
-@event1=Event.new({'name' => 'Sword & Shield','type' => 'combat on foot','family'=>'On foot','max' => 6, 'img' => '/events/sword.png','prize' => 400,'event_date' => '1216-03-30'}).save
+@event1=Event.new({'name' => 'fast joust','type' => 'jousting','family'=>'mounted','max' => 5, 'img' => '/event/joust.png','prize' => 500,'event_date' => '2016-03-30'}).save
+@event2=Event.new({'name' => '200yd archery','type' => 'archery','family'=>'ranged','max' => 5, 'img' => '/event/archery.png','prize' => 200,'event_date' => '2016-05-30'}).save
+@event1=Event.new({'name' => 'Sword & Shield','type' => 'combat on foot','family'=>'On foot','max' => 6, 'img' => '/event/sword.png','prize' => 400,'event_date' => '1216-03-30'}).save
 
 @event1.add_knight(@knight1)
 @event1.add_knight(@knight2)

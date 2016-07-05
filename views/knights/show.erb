@@ -7,12 +7,15 @@
 <h3>Fighting for:</h3>
 <h3><%=Kingdom.find(@knight.nation_id).name%></h3>
   <%@knight.trophies.each do |trophy|  %>
+  <div class="miniknight">
+  <div class = "trophy_sizer"><img class = "thumbnail" src="/trophy/<%=trophy.type%>.png"></div> 
   <p>Won a <%=trophy.type%> trophy in the <%=trophy.event%> coming in position <%=trophy.position%>.</p>
+  </div>
   <%end  %>
 
-
+<hr>
 <a href="/knights/<%=@knight.id%>/edit">Edit Knight</a>
-
+<hr>
 <form action="/knights/<%=@knight.id%>/delete" method="post">
 
 <input type="submit" value="Delete Knight">

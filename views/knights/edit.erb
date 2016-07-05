@@ -1,0 +1,19 @@
+<h2>Edit <%=@knight.name%>!</h2>
+<div class = "portrait_sizer"><img class = "thumbnail" src="<%=@knight.img%>"></div>
+<br>
+<form action="/knights" method="post">
+ <label for="name">Name:</label>
+ <input type="text" name="name" value="<%=@knight.name%>"><br>
+
+ <label for="nation_id">From which kingdom does he hail?</label>
+ <select name="nation_id">
+  <% @kingdoms.each do |kingdom|%>
+  <option value="<%= kingdom.id %>" <%="selected = 'selected'" if @knight.nation_id == kingdom.id%>><%= kingdom.name %></option>
+  <% end %>
+</select><br>
+
+<label for="img"> image:</label>
+<input type="text" name="img" value="<%=@knight.img%>">
+<hr>
+<input type='submit' value="Edit Knight">
+</form>

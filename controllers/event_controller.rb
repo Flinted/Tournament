@@ -27,8 +27,8 @@ end
 
 # create
 post '/events' do
-  @event = Event.new(params)
-  @event.save()
+  event = Event.new(params)
+  @event= event.save()
   erb(:'events/create')
 end
 

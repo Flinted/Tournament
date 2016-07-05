@@ -1,0 +1,13 @@
+<h2>Edit this Horse!</h2>
+<div class = "horse_sizer"><img class = "thumbnail" src="<%=@horse.img%>"></div>
+<br>
+
+<form action="/horses/<%=@horse.id%>" method="post">
+ <label for="name">Horse name:</label>
+ <input type="text" name="name" value="<%=@horse.name%>">
+
+<label for="img">Image:</label>
+<input type="text" name="img" value="<%=@horse.img%>">
+<hr>
+<input type='submit' value="Edit Horse">
+</form>

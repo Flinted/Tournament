@@ -1,0 +1,16 @@
+<h3>Edit the <%=@kingdom.name%>!</h3>
+<div class = "flag_sizer"><img class = "thumbnail" src="<%=@kingdom.flag%>"></div>
+<br>
+
+<form action="/kingdoms/<%=@kingdom.id%>" method="post">
+ <label for="name">Name:</label>
+ <input type="text" name="name" value= "<%=@kingdom.name%>">
+
+<label for="flag">Kingdom Flag:</label>
+<input type="text" name="flag" value="<%=@kingdom.flag%>">
+
+<label for="arms"> Coat of Arms:</label>
+<input type="arms" name="arms" value="<%=@kingdom.arms%>">
+<hr>
+<input type='submit' value="Edit Kingdom">
+</form>

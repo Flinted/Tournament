@@ -35,5 +35,5 @@ post '/stage/:id/run' do
   @event.populate()
   @event.run_event()
   @event.clear()
-  redirect to '/rankings/knights'
+  redirect to '/events/#{@event.id}'
 end

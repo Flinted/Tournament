@@ -19,18 +19,6 @@ a {
   color: black;
 }
 
-/*.navbar {
-  width: 100%;
-  height: 70px;
-  margin-top: -10px;
-  margin-left: -10px;
-  padding-top: 30px;
-  background-image: url('http://www.hinesofoxford.com/media/catalog/category/Copy_of_938_Bayeux_-_Battle_of_Hastings_1.jpg');
-  background-size: contain;
-  position:fixed;
-  box-shadow: 5px 5px 25px black;
-}*/
-
 .navbar {
   width: 70%;
   min-width: 800px;
@@ -79,7 +67,6 @@ a {
   filter: drop-shadow(5px 5px 5px #222);
 }
 
-
 .rightbar{
   width:15%;
   float:right;
@@ -93,19 +80,19 @@ a {
 }
 
 .icons {
-  width: 70%;
-  height: 60%;
+  width: 50%;
+  height: 20%;
   padding-top: 50px;
   margin:auto;
 }
-.shield {
+/*.shield {
   /*border: 2px solid black;*/
   /*background-image: url('/shield.png');*/
-  background-repeat: no-repeat;
+/*  background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: contain;*/
   width: 100%;
-}
+}*/
 .sidebar{
   min-height:800px;
   width: 22%;
@@ -161,6 +148,18 @@ a {
   box-shadow: 2px 2px 3px;
 }
 
+.trophy_sizer{
+  width: 50px;
+  height: 100px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*border: 2px double black;
+  box-shadow: 2px 2px 3px;*/
+}
+
 .mini_portrait{
   width: 100px;
   height: 150px;
@@ -197,10 +196,13 @@ a {
 .thumbnail {
   width: 100%;
 }
+.bthumbnail{
+  width: 70%;
+  -webkit-filter: drop-shadow(1px 1px 3px #222);
+  filter: drop-shadow(1px 1px 3px #222);
+}
+
 .order {
-  /*background-color: #541101;*/
-  /*background-color: grey;*/
-  /*border: 2px solid black;*/
   margin-bottom: 5px;
 }
 
@@ -219,7 +221,9 @@ a {
     background-image: url('/paper.png');
     background-size: cover;
     background-color: #6d819c;
-    border: 2px solid black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    /*border: 2px solid black;*/
     width:150px;
     color: white;
     padding: 10px;
