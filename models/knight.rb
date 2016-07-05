@@ -99,6 +99,12 @@ def self.map_item(sql)
   return result.first
 end
 
+def self.search(search)
+sql= "SELECT * FROM knights WHERE name LIKE '%#{search}%'"
+knights = Knight.map_items(sql)
+return knights
+end
+
 def get_trophies()
   sql = "SELECT * FROM results WHERE knight_id = #{id}"
   results = run(sql)

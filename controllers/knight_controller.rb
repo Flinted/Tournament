@@ -21,6 +21,11 @@ get '/knights/new' do
   erb(:'knights/new')
 end
 
+get '/knights/search' do
+  @knights = Knight.search(params['search'])
+  erb(:'knights/result')
+end
+
 # create
 post '/knights' do
   @knight = Knight.new(params)

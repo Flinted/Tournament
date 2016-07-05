@@ -2,9 +2,16 @@
 <p><%=@kingdom.name%></p>
 <div class = "flag_sizer"><img class = "thumbnail" src="<%=@kingdom.flag%>"></div>
 
-<div class = "thumbnail_sizer"><img class = "thumbnail" src="<%=@kingdom.arms%>"></div> 
-<hr>
+<div class = "arms_thumbnail_sizer"><img class = "thumbnail" src="<%=@kingdom.arms%>"></div> 
 
+<%@kingdom.trophies.each do |trophy| %>
+<div class= 'mini_trophy'>
+    <div class = "trophy_mini_sizer"><img class = "thumbnail" src="/trophy/<%=trophy.type%>.png"></div> 
+</div>
+<% end %><br>
+<%=@kingdom.get_points  %> points.
+
+<hr>
 <a href="/kingdoms/<%=@kingdom.id%>/edit">Edit Kingdom</a>
 
 <form action="/kingdoms/<%=@kingdom.id%>/delete" method="post">

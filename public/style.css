@@ -123,6 +123,16 @@ form input[type=radio]{
   justify-content: center;
 }
 
+.arms_thumbnail_sizer{
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .flag_sizer{
   width: 200px;
   max-height: 120px;
@@ -182,6 +192,39 @@ form input[type=radio]{
   /*border: 2px double black;
   box-shadow: 2px 2px 3px;*/
 }
+
+.trophy_mini_sizer{
+  width: 25px;
+  height: 50px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*border: 2px double black;
+  box-shadow: 2px 2px 3px;*/
+}
+
+.mini_trophy {
+  width: 7%;
+  min-height: 50px;
+  border: 2px dashed #7d6137;
+  overflow: hidden;
+  margin: auto;
+  display: inline-block;
+  align-items: center; 
+}
+
+.trophy {
+  width: 20%;
+  min-height: 50px;
+  border: 2px dashed #7d6137;
+  overflow: hidden;
+  margin: auto;
+  display: inline-block;
+  align-items: center; 
+}
+
 
 .mini_portrait{
   width: 100px;

@@ -3,7 +3,7 @@ require('pry-byebug')
 
 class Kingdom
 
-  attr_reader(:id,:name,:flag,:arms)
+  attr_reader(:id,:name,:flag,:arms,:trophies)
 
   def initialize(options)
     @id= options['id'].to_i
@@ -20,7 +20,8 @@ class Kingdom
             for trophy in knight.trophies do
                 @trophies << trophy
             end
-        end       
+        end  
+        sort_trophies()     
   end
 
   def get_points
@@ -34,6 +35,10 @@ class Kingdom
       end
       points = (gold * 5) + (silver*3) + bronze
       return points
+  end
+
+  def sort_trophies()
+      @trophies = @trophies.sort {|a,b| b.type <=> a.type}
   end
 
   def trophy_count()
