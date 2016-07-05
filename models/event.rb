@@ -32,7 +32,7 @@ class Event
 
   def tracker(knight)
       @track = @track + "-#{knight}"
-      sql = "UPDATE events SET track = '#{@track}' WHERE id= #{id}"
+      sql = "UPDATE events SET track = '#{@track}' WHERE id= #{@id}"
       run(sql)
   end
 

@@ -31,6 +31,7 @@ end
 # show
 get '/kingdoms/:id' do
   @kingdom = Kingdom.find(params[:id])
+  @kingdom.get_trophies
   erb(:'kingdoms/show')
 end
 

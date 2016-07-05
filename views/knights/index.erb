@@ -1,8 +1,16 @@
 <div class = "stable">
 <%= erb :'knights/stables' %>
+<hr>
 </div>
 
 <h2>Knights</h2>
+<div class= 'leftsearch'>
+  <form action="/knights/search" method="get">
+  <label for="search">Find a knight</label><br>
+  <input type="text" name="search" placeholder="Search..">
+  <input type="submit" value="Search">
+</form>
+</div>
 
 <% @knights.each do |knight| %>
  <div class="miniknight">

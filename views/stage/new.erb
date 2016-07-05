@@ -13,6 +13,8 @@
 <hr>
 <form action="/stage/<%=@event.id%>/run" method="post">
 <input type="submit" value="Run the Event!">
+</form>
+
 <hr>
 <h2>Current competitors! <%=@event.competitor_count%>/<%=@event.max%></h2>
 <% if @event.competitor_count == 0 %>
@@ -22,7 +24,8 @@
     <div class="miniknight">
     <b><a href="/knights/<%=competitor.id%>"><%= competitor.name()%></a></b>
     <div class = "mini_portrait"><a href="/knights/<%= competitor.id%>"><img class = "thumbnail" src="<%=competitor.img%>"></a></div>
-    </div>
+ <div class = "flag_mini_sizer"><a href="/knights/<%= competitor.nation_id%>"><img class = "thumbnail" src="<%=Kingdom.find(competitor.nation_id).flag%>"></a></div>
+</div>
     <%end%>
 <% end %>
 
