@@ -2,26 +2,20 @@
 
 <form action="/knights" method="post">
  <label for="name">Name:</label>
- <input type="text" name="name" placeholder="Sir...">
-
+ <input type="text" required id="name" placeholder="Sir...">
+<hr>
  <label for="nation_id">From which kingdom does he hail?</label>
  <select name="nation_id">
   <% @kingdoms.each do |kingdom|%>
   <option value="<%= kingdom.id %>"><%= kingdom.name %></option>
   <% end %>
 </select>
-<!-- 
-<label for="horse">Does he have a steed?</label>
-<select name="horse">
-  <% @horses.each do |horse|%>
-  <option value="<%= horse %>"><%= horse.name %></option>
-  <% end %>
-</select> -->
-
+<hr>
 <label for="wealth">Starting Wealth:</label>
-<input type="text" name="wealth" placeholder="100">
-
+<input type="text" required id="wealth" placeholder="100">
+<hr>
 <label for="img"> image:</label>
-<input type="text" name="img" placeholder="enter image url">
+<input type="text" required id="img" placeholder="enter image url">
+<hr>
 <input type='submit' value="Add Knight">
 </form>
