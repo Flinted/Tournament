@@ -5,7 +5,7 @@
 <select name="knight">
     <%@list.knights.each do |knight|%>
         <%if not @event.competitor_ids.include?(knight.id) %> 
-        <option value="<%= knight.id %>"><%= knight.name %></option> 
+        <option value="<%= knight.id %>"><%= knight.name %> representing <%=knight.get_kingdom_name%></option> 
         <% end %>
     <% end %>
  <input type='submit' value="Add Knight">
