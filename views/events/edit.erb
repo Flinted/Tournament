@@ -1,0 +1,41 @@
+<h2>Edit <%=@event.name %>!</h2>
+
+<form action="/events/<%=@event.id%>" method="post">
+ <label for="name">Event name:</label>
+ <input type="text" name="name" value ="<%=@event.name%>">
+<hr>
+ <label for="family"> Event family:</label>
+ <select name="family">
+     <option value="mounted" <%="selected = 'selected'" if @event.family == "mounted"%>>Mounted</option>
+     <option value="on foot" <%="selected = 'selected'" if @event.family == "on foot"%>>On foot</option>
+     <option value="ranged"<%="selected = 'selected'" if @event.family == "ranged"%>>Ranged</option>
+     <option value="sport" <%="selected = 'selected'" if @event.family == "sport"%>>Sport</option>
+ </select>
+ <hr>
+
+<label for="type">Event type:</label>
+<select name="type">
+<option value="joust" <%="selected = 'selected'" if @event.type == "joust"%>>Jousting</option>
+<option value="sword" <%="selected = 'selected'" if @event.type == "sword"%>>Sword & Shield</option>
+<option value="wrestle" <%="selected = 'selected'" if @event.type == "wrestle"%>>Wrestling</option>
+<option value="team" <%="selected = 'selected'" if @event.type == "team"%>>Team Combat</option>  
+<option value="archery" <%="selected = 'selected'" if @event.type == "archery"%>>Archery</option>
+  <option value="crossbow" <%="selected = 'selected'" if @event.type == "crossbow"%>>Crossbows</option>
+  <option value="colf" <%="selected = 'selected'" if @event.type == "colf"%>>Colf</option>
+  <option value="horseshoes" <%="selected = 'selected'" if @event.type == "horseshoes"%>>Horseshoes</option>
+  <option value="staff" <%="selected = 'selected'" if @event.type == "staff"%>>Quarter-Staff</option>
+  <option value="hammer" <%="selected = 'selected'" if @event.type == "hammer"%>>Hammer Throwing</option>
+  <option value="bowls" <%="selected = 'selected'" if @event.type == "bowls"%>>Bowls</option>
+</select>
+<hr>
+<label for="max">Maximum Competitors:</label>
+<input type="number" name="max" value ="<%=@event.max%>">
+<hr>
+<label for="prize">Prize Money:</label>
+<input type="number" name="prize" value ="<%=@event.prize%>">
+<hr>
+<label for="event_date">Event Date:</label>
+<input type="date" name="event_date">
+<hr>
+<input type='submit' value="Edit Event">
+</form>
