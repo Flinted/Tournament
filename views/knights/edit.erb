@@ -1,7 +1,7 @@
 <h2>Edit <%=@knight.name%>!</h2>
 <div class = "portrait_sizer"><img class = "thumbnail" src="<%=@knight.img%>"></div>
 <br>
-<form action="/knights" method="post">
+<form action="/knights/<%=@knight.id%>" method="post">
  <label for="name">Name:</label>
  <input type="text" name="name" value="<%=@knight.name%>"><br>
 

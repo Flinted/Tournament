@@ -17,6 +17,16 @@ class Horse
       return Horse.map_item(sql)
     end
 
+    def self.update(options)
+      sql = "UPDATE horses SET
+             name= '#{options['name']}',
+             img = '#{options['img']}',
+             knight_id= '#{options['knight_id']}'
+             WHERE id = '#{options['id']}'"
+         
+      run(sql)
+    end
+
     def self.all()
       sql = "SELECT * FROM horses"
       return Horse.map_items(sql)

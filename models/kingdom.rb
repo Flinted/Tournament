@@ -52,6 +52,15 @@ class Kingdom
       return Kingdom.map_item(sql)
     end
 
+    def self.update(options)
+      sql = "UPDATE kingdoms SET
+             name= '#{options['name']}',
+             flag= '#{options['flag']}',
+             arms = '#{options['arms']}'
+             WHERE id = '#{options['id']}'"
+         
+      run(sql)
+    end
     def self.destroy(id)
       sql = "DELETE FROM kingdoms WHERE id = #{id}"
       run(sql)

@@ -58,6 +58,16 @@ def save()
   return knight
 end
 
+def self.update(options)
+  sql = "UPDATE knights SET
+         name= '#{options['name']}',
+         nation_id= '#{options['nation_id']}',
+         img = '#{options['img']}'
+         WHERE id = '#{options['id']}'"
+     
+  run(sql)
+end
+
 def self.destroy(id)
   sql = "DELETE FROM knights WHERE id = #{id}"
   run(sql)

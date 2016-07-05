@@ -10,7 +10,10 @@
     <% end %>
  <input type='submit' value="Add Knight">
 </form>
-
+<hr>
+<form action="/stage/<%=@event.id%>/run" method="post">
+<input type="submit" value="Run the Event!">
+<hr>
 <h2>Current competitors! <%=@event.competitor_count%>/<%=@event.max%></h2>
 <% if @event.competitor_count == 0 %>
     <h2>No competitors yet.</h2>
@@ -23,8 +26,7 @@
     <%end%>
 <% end %>
 
-<form action="/stage/<%=@event.id%>/run" method="post">
-<input type="submit" value="Run the Event!">
+
 
 
 

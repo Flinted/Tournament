@@ -92,6 +92,19 @@ class Event
     return Event.map_item(sql)
   end
 
+  def self.update(options)
+    sql = "UPDATE events SET
+           name= '#{options['name']}',
+           type= '#{options['type']}',
+           family= '#{options['family']}',
+           max= '#{options['max']}',
+           img = '/event/#{options['type']}.png',
+           prize= '#{options['prize']}',
+           event_date= '#{options['event_date']}'
+           WHERE id = '#{options['id']}'"  
+    run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM events"
     return Event.map_items(sql)
