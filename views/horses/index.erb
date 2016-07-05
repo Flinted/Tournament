@@ -5,7 +5,7 @@
 <% @horses.each do |horse| %>
       <div class="miniknight">
                   <b><a href="/horses/<%=horse.id%>"><%= horse.name()%></a></b>
-                  <div class = "flag_sizer"><a href="/horses/<%= horse.id%>"><img class = "thumbnail" src="<%=horse.img%>"></a></div>
+                  <div class = "horse_mini_sizer"><a href="/horses/<%= horse.id%>"><img class = "thumbnail" src="<%=horse.img%>"></a></div>
                   <%if horse.knight_id != 0  %>
                         <p>ridden by <%=Knight.find(horse.knight_id).name %></p>
                       <div class = "mini_portrait"><img class = "thumbnail" src="<%=Knight.find(horse.knight_id).img %>"></div>
