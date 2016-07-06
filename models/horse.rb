@@ -1,5 +1,5 @@
 require_relative('../db/sql_runner')
-require_relative('../db/knight')
+require_relative('knight')
 
 class Horse
 
@@ -29,7 +29,7 @@ class Horse
     end
 
     def get_knight()
-        return Knight.new(@knight_id)
+        return Knight.find(@knight_id)
     end
 
     def self.all()

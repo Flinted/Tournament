@@ -238,7 +238,7 @@ margin-left: 2%;
 
 .trophy {
   width: 20%;
-  min-height: 50px;
+  min-height: 240px;
   border: 2px dashed #7d6137;
   overflow: hidden;
   margin: auto;
@@ -326,6 +326,7 @@ margin-left: 2%;
     background-color: #6d819c;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    opacity: 0.9;
     width:150px;
     color: white;
     padding: 10px;
