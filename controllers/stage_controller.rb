@@ -30,6 +30,14 @@ post '/stage/:id/new' do
   erb(:'stage/new')
 end
 
+post '/stage/:eid/:cid/remove' do
+  @event = Event.find(params['eid'].to_i)
+  @event.drop_competitor(params['cid'].to_i)
+  @event.populate()
+  @list= List.new(Knight.all)
+  erb(:'stage/new')
+end
+
 post '/stage/:id/run' do
   @event = Event.find(params['id'])
   @event.populate()
@@ -37,3 +45,5 @@ post '/stage/:id/run' do
   @event.clear()
   redirect to "/events/#{@event.id}"
 end
+
+

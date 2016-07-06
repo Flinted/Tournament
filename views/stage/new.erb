@@ -24,7 +24,11 @@
     <div class="miniknight">
     <b><a href="/knights/<%=competitor.id%>"><%= competitor.name()%></a></b>
     <div class = "mini_portrait"><a href="/knights/<%= competitor.id%>"><img class = "thumbnail" src="<%=competitor.img%>"></a></div>
- <div class = "flag_mini_sizer"><a href="/knights/<%= competitor.nation_id%>"><img class = "thumbnail" src="<%=Kingdom.find(competitor.nation_id).flag%>"></a></div>
+    <div class = "flag_mini_sizer"><a href="/knights/<%= competitor.nation_id%>"><img class = "thumbnail" src="<%=Kingdom.find(competitor.nation_id).flag%>"></a></div>
+
+    <form action="/stage/<%=@event.id%>/<%=competitor.id%>/remove" method="post">
+    <input type="submit" value="Remove Competitor">
+    </form>
 </div>
     <%end%>
 <% end %>
