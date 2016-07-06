@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('../db/knight')
 
 class Horse
 
@@ -25,6 +26,10 @@ class Horse
              WHERE id = '#{options['id']}'"
          
       run(sql)
+    end
+
+    def get_knight()
+        return Knight.new(@knight_id)
     end
 
     def self.all()

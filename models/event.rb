@@ -30,8 +30,13 @@ class Event
     end
   end
 
-  def tracker(knight)
+  def inst_tracker(knight)
     @track = @track + "-#{knight}"
+  end
+
+  def tracker(knight)
+    # @track = @track + "-#{knight}"
+    inst_tracker(knight)
     sql = "UPDATE events SET track = '#{@track}' WHERE id= #{@id}"
     run(sql)
   end
@@ -58,18 +63,15 @@ class Event
   end
 
   def drop_competitor(rem_id)
-    if @track.length != 0
-      ids = @track.split("-")
-      ids.each do |id|
-          id = "" if id.to_i == rem_id
-      end
-    end
-
+    ids = @track.split("-")
+    new_ids =ids.map {|id| id.to_i == rem_id.to_i ? "" : id}
+  
     @track = ""
-    binding.pry
-    ids.each do |id|
-        tracker(id)
+    new_ids.each do |id|
+      inst_tracker(id)
     end
+    sql = "UPDATE events SET track = '#{@track}' WHERE id= #{@id}"
+    run(sql)    
   end
 
   # DATABASE FUNCTIONS
@@ -118,6 +120,13 @@ def self.update(options)
   event_date= '#{options['event_date']}'
   WHERE id = '#{options['id']}'"  
   run(sql)
+end
+
+def self.has_ran()
+  sql = "SELECT * FROM events WHERE ran = 't'"
+  events = Event.map_items(sql)
+  events.each{|event| event.populate}
+  return events
 end
 
 def self.all()

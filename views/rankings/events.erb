@@ -1,0 +1,12 @@
+<h1>Events and finishers:</h1>
+<% @ran_events.each do |event| %>
+ <% positions = event.get_finish_positions%>
+ <div class="event_rankings">
+   <div class= "thumbnail_sizer_mini"><img class = "thumbnail" src="<%=event.img%>"></div>
+    <h1><%= event.name  %> on <%= event.event_date  %></h1>
+    <%positions.each do |position|  %>
+        <%=position[0].name%> finished in position <%=position[1]%> for the <%=position[0].get_kingdom_name%><br>
+      <br>
+ <%end  %>
+ </div>
+<%end%>

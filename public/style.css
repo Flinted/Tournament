@@ -104,14 +104,7 @@ margin-left: 2%;
   padding-top: 50px;
   margin:auto;
 }
-/*.shield {
-  /*border: 2px solid black;*/
-  /*background-image: url('/shield.png');*/
-/*  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;*/
-  width: 100%;
-}
+
 .sidebar{
   min-height:800px;
   width: 22%;
@@ -129,6 +122,14 @@ margin-left: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.thumbnail_sizer_mini{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin: auto;
+  float:left;
 }
 
 .arms_thumbnail_sizer{
@@ -299,6 +300,19 @@ margin-left: 2%;
   min-height:470px;
   border: 2px dashed #7d6137;
   overflow: hidden;
+  margin: auto;
+  display: inline-block;
+  align-items: center; 
+}
+
+.event_rankings{
+  width: 70%;
+  min-height:150px;
+  font-size: 0.6rem;
+  border: 2px dashed #7d6137;
+  overflow: hidden;
+  padding-right: 10px;
+  text-align: right;
   margin: auto;
   display: inline-block;
   align-items: center; 

@@ -5,7 +5,7 @@ require_relative('../models/horse')
 require_relative('../models/kingdom')
 
 get '/rankings' do
-  redirect to ('/rankings/kingdoms')
+  erb(:'rankings/index')
 end
 
 
@@ -24,10 +24,8 @@ get '/rankings/kingdoms' do
   erb(:'rankings/kingdoms')
 end
 
-get '/rankings/sidebar' do
-  @ranking = Ranking.new
-  binding.pry
-  @ranking.refresh
-  @kingdoms_rank = @ranking.rank_kingdoms()
-  erb :'rankings/sidebar', :locals => {:kingdoms_ranks => @kingdoms_rank}
+get '/rankings/events' do
+  @ran_events = Event.has_ran()
+  erb(:'rankings/events')
 end
+
