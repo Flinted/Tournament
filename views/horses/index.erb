@@ -3,7 +3,7 @@
 
 <h2>Horses</h2>
 <% @horses.each do |horse| %>
-      <div class="miniknight">
+      <div class="minihorse">
                   <b><a href="/horses/<%=horse.id%>"><%= horse.name()%></a></b>
                   <div class = "horse_mini_sizer"><a href="/horses/<%= horse.id%>"><img class = "thumbnail" src="<%=horse.img%>"></a></div>
                   <%if horse.knight_id != 0  %>
@@ -11,6 +11,7 @@
                       <div class = "mini_portrait"><img class = "thumbnail" src="<%=horse.get_knight.img %>"></div>
                   <% else %>
                         <p>Is in the stable.</p>
+                        <div class = "stable_sizer"><img class = "thumbnail" src="/castle.png"></div>
                   <%end %>
 
       </div>

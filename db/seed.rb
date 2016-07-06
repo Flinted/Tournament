@@ -64,7 +64,7 @@ Kingdom.delete_all
 @knight25= Knight.new({'name' => 'Sir Forest', 'nation_id' => @kingdom12.id,'img' => '/knights/knight25.jpg', 'wealth' => 0}).save
 @knight26= Knight.new({'name' => 'Sir Tain Def', 'nation_id' => @kingdom13.id,'img' => '/knights/knight26.jpg', 'wealth' => 0}).save
 @knight27= Knight.new({'name' => 'Sir Luke', 'nation_id' => @kingdom13.id,'img' => '/knights/knight27.jpg', 'wealth' => 0}).save
-@knight28= Knight.new({'name' => 'Sir Joseph', 'nation_id' => @kingdom14.id,'img' => '/knights/knight28.jpg', 'wealth' => 0}).save
+@knight28= Knight.new({'name' => 'Sir Joseph', 'nation_id' => @kingdom14.id,'img' => '/knights/knight11.jpg', 'wealth' => 0}).save
 @knight20= Knight.new({'name' => 'Sir Barry', 'nation_id' => @kingdom14.id,'img' => '/knights/knight20.jpg', 'wealth' => 0}).save
 
 
